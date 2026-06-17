@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "author": "????? ?",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 202.2, "left": 66.6, "attrs": {} },
+    { "type": "wokwi-hc-sr04", "id": "ultrasonic2", "top": -46.5, "left": 360.7, "attrs": {} },
+    {
+      "type": "wokwi-buzzer",
+      "id": "bz1",
+      "top": 232.8,
+      "left": 645,
+      "attrs": { "volume": "0.1" }
+    }
+  ],
+  "connections": [
+    [ "uno:3.3V", "uno:IOREF", "green", [ "v-0.1", "h-34.2", "v0", "h19.2", "v-9.6" ] ],
+    [ "uno:5V", "ultrasonic2:VCC", "red", [ "v0" ] ],
+    [ "uno:9", "ultrasonic2:TRIG", "green", [ "v0" ] ],
+    [ "uno:10", "ultrasonic2:ECHO", "green", [ "v0" ] ],
+    [ "uno:GND.1", "ultrasonic2:GND", "black", [ "v0" ] ],
+    [ "uno:11", "bz1:1", "green", [ "v0" ] ],
+    [ "uno:GND.2", "bz1:2", "black", [ "v0" ] ]
+  ],
+  "dependencies": {}
+}
